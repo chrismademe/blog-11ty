@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>{{ title }}</title>
+    
+    {% for id, href in site.stylesheets %}
+    <link id="{{ id }}-css" rel="stylesheet" href="{{ href }}">
+    {% endfor %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+</head>
+<body class="bg-grey-100">
+
+    {{ content | safe }}
+
+    {% for id, src in site.scripts %}
+    <script id="{{ id }}-js" src="{{ src }}"></script>
+    {% endfor %}
+    
+</body>
+</html>
