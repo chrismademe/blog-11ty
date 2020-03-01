@@ -1,10 +1,13 @@
 ---
 author: Chris Galbraith
-title: Create a Simple Slideout Menu using Vanilla JS
+title: Create a Simple Slideout Menu using Vanilla Javascript
 date: "2019-08-17T22:40:32.169Z"
-description: In this tutorial, we'll create a slick slideout menu in for your responsive website.
-category: code
-code: true
+description: In this tutorial, we'll create a slick slideout menu using Vanilla Javascript
+tags:
+    - post
+    - code
+    - javascript
+    - css
 layout: post
 ---
 
@@ -87,7 +90,7 @@ body {
     padding: 42px 0;
     position: absolute;
     left: -280px;
-    transition: left .4s;
+    transition: left 0.4s;
     top: 0;
     height: 100vh;
     width: 280px;
@@ -151,7 +154,7 @@ Alright, the breakdown. First, we want to style the menu itself.
     padding: 42px 0;
     position: absolute;
     left: -280px;
-    transition: left .4s;
+    transition: left 0.4s;
     top: 0;
     height: 100vh;
     width: 280px;
@@ -230,24 +233,24 @@ Pulling it all together. Without this, our menu is pretty much useless. Now, bef
 Onwards...
 
 ```js
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function() {
     var menu, toggleButton, closeButton;
 
     // Set Elements
-    menu = document.getElementById('slideout-menu');
-    toggleButton = document.getElementById('slideout-toggle');
-    closeButton = document.getElementById('slideout-close');
+    menu = document.getElementById("slideout-menu");
+    toggleButton = document.getElementById("slideout-toggle");
+    closeButton = document.getElementById("slideout-close");
 
     // Toggle Menu
-    toggleButton.addEventListener('click', function(e) {
+    toggleButton.addEventListener("click", function(e) {
         e.preventDefault();
-        menu.classList.toggle('is-open');
+        menu.classList.toggle("is-open");
     });
 
     // Close Menu
-    closeButton.addEventListener('click', function(e) {
+    closeButton.addEventListener("click", function(e) {
         e.preventDefault();
-        menu.classList.remove('is-open');
+        menu.classList.remove("is-open");
     });
 });
 ```
@@ -266,18 +269,18 @@ Before anything else, let's make sure the DOM has loaded properly by listening o
 var menu, toggleButton, closeButton;
 
 // Set Elements
-menu = document.getElementById('slideout-menu');
-toggleButton = document.getElementById('slideout-toggle');
-closeButton = document.getElementById('slideout-close');
+menu = document.getElementById("slideout-menu");
+toggleButton = document.getElementById("slideout-toggle");
+closeButton = document.getElementById("slideout-close");
 ```
 
 Next, we're defining a few variables that we'll use and finding the elements we need to manipulate by their IDs (as I mentioned earlier).
 
 ```js
 // Toggle Menu
-toggleButton.addEventListener('click', function(e) {
+toggleButton.addEventListener("click", function(e) {
     e.preventDefault();
-    menu.classList.toggle('is-open');
+    menu.classList.toggle("is-open");
 });
 ```
 
@@ -287,9 +290,9 @@ In my example, the toggle button is positioned in such a way that when the menu 
 
 ```js
 // Close Menu
-closeButton.addEventListener('click', function(e) {
+closeButton.addEventListener("click", function(e) {
     e.preventDefault();
-    menu.classList.remove('is-open');
+    menu.classList.remove("is-open");
 });
 ```
 
@@ -298,4 +301,5 @@ And finally, we listen out for clicks on our close button (inside the menu) and 
 That's it! You have an awesome slideout menu for your next site.
 
 ### Demo
+
 For a working demo, head over to [Codepen](http://codepen.io/chrismademe/pen/bEMQbK) :).

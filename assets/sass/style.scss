@@ -1,49 +1,48 @@
-@import 'tokens/tokens';
-@import 'tokens/scale';
-@import 'functions/*';
+@import "tokens/tokens";
+@import "tokens/scale";
+@import "functions/*";
 
 @font-face {
-    font-family: 'CircularStd';
-    src: local('CircularStd-Book'),
-        url('../fonts/CircularStd-Book.woff2') format('woff2'),
-        url('../fonts/CircularStd-Book.woff') format('woff');
+    font-family: "CircularStd";
+    src: local("CircularStd-Book"),
+        url("../fonts/CircularStd-Book.woff2") format("woff2"),
+        url("../fonts/CircularStd-Book.woff") format("woff");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'CircularStd';
-    src: local('CircularStd'), local('CircularStd-BookItalic'),
-        url('../fonts/CircularStd-BookItalic.woff2') format('woff2'),
-        url('../fonts/CircularStd-BookItalic.woff') format('woff');
+    font-family: "CircularStd";
+    src: local("CircularStd"), local("CircularStd-BookItalic"),
+        url("../fonts/CircularStd-BookItalic.woff2") format("woff2"),
+        url("../fonts/CircularStd-BookItalic.woff") format("woff");
     font-weight: 400;
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'CircularStd';
-    src: local('CircularStd-Black'),
-        url('../fonts/CircularStd-Black.woff2') format('woff2'),
-        url('../fonts/CircularStd-Black.woff') format('woff');
+    font-family: "CircularStd";
+    src: local("CircularStd-Black"),
+        url("../fonts/CircularStd-Black.woff2") format("woff2"),
+        url("../fonts/CircularStd-Black.woff") format("woff");
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'CircularStd';
-    src: local('CircularStd-BlackItalic'),
-        url('../fonts/CircularStd-BlackItalic.woff2') format('woff2'),
-        url('../fonts/CircularStd-BlackItalic.woff') format('woff');
+    font-family: "CircularStd";
+    src: local("CircularStd-BlackItalic"),
+        url("../fonts/CircularStd-BlackItalic.woff2") format("woff2"),
+        url("../fonts/CircularStd-BlackItalic.woff") format("woff");
     font-weight: 900;
     font-style: italic;
 }
 
-
 @font-face {
-    font-family: 'JetBrains Mono';
-    src: local('JetBrains Mono Regular'), local('JetBrainsMono-Regular'),
-        url('JetBrainsMono-Regular.woff2') format('woff2'),
-        url('JetBrainsMono-Regular.woff') format('woff');
+    font-family: "JetBrains Mono";
+    src: local("JetBrains Mono Regular"), local("JetBrainsMono-Regular"),
+        url("JetBrainsMono-Regular.woff2") format("woff2"),
+        url("JetBrainsMono-Regular.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -149,9 +148,23 @@ select {
     white-space: nowrap;
 }
 
+.skip-link:not(:focus) {
+    @extend .visually-hidden;
+}
+
+.skip-link:focus {
+    background-color: var(--color-black);
+    color: white;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: var(--size-3);
+}
+
 code {
     background-color: var(--color-grey);
-    border-radius: .2rem;
+    border-radius: 0.2rem;
     color: white;
     font-size: var(--step--1);
     padding: var(--size-1);
@@ -211,5 +224,5 @@ h4,
     font-size: var(--step-2);
 }
 
-@import 'components/*.scss';
-@import 'utilities/*.scss';
+@import "components/*.scss";
+@import "utilities/*.scss";

@@ -1,0 +1,7 @@
+@media (min-width: 20em) {
+    .page-header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+    }
+}

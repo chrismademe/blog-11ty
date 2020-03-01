@@ -3,7 +3,9 @@ author: Chris Galbraith
 title: "2020"
 date: "2020-01-08T22:53:32.169Z"
 description: A look at what I want to achieve in 2020.
-category: life
+tags:
+    - post
+    - life
 layout: post
 ---
 
